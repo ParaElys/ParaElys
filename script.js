@@ -166,10 +166,34 @@ let currentVersion = 'desktop';
         switcher.textContent = currentVersion === 'mobile' ? t.fullVersion : t.mobileVersion;
     }
 
+    function syncPhoneFullBackground() {
+        const enabled = document.body.classList.contains('phone-full-mode');
+        if (!enabled) {
+            document.documentElement.style.removeProperty('--phone-full-bg-height');
+            return;
+        }
+
+        // Some mobile browsers auto-shrink an 820px desktop layout to fit the phone.
+        // Viewport-height CSS units may then cover only part of the physical screen.
+        // Use the phone's aspect ratio to cover the whole visible screen instead.
+        const screenWidth = Math.max(1, window.screen.width || window.innerWidth);
+        const screenHeight = Math.max(1, window.screen.height || window.innerHeight);
+        const screenRatio = Math.min(3, Math.max(0.45, screenHeight / screenWidth));
+        const sceneWidth = Math.max(820, document.body.scrollWidth, window.innerWidth);
+        const neededHeight = Math.ceil(Math.max(
+            window.innerHeight,
+            window.visualViewport?.height || 0,
+            sceneWidth * screenRatio * 1.08
+        ));
+        document.documentElement.style.setProperty('--phone-full-bg-height', neededHeight + 'px');
+    }
+
     function applyVersion(version) {
         currentVersion = version;
         document.body.classList.toggle('mobile-mode', version === 'mobile');
         document.body.classList.toggle('desktop-mode', version === 'desktop');
+        document.body.classList.toggle('phone-full-mode', version === 'desktop' && isMobileDevice());
+        syncPhoneFullBackground();
         updateVersionSwitchText();
         savePreference('paraelys-version', version);
         closeDropdowns();
@@ -472,6 +496,12 @@ let currentVersion = 'desktop';
 
         window.refreshCosmicParticles = rebuild;
         window.addEventListener('resize', scheduleRebuild, { passive: true });
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                syncPhoneFullBackground();
+                rebuild();
+            }, 250);
+        }, { passive: true });
         rebuild();
         rafId = requestAnimationFrame(draw);
 
