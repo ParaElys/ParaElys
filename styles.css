@@ -258,12 +258,12 @@ body {
         text-align: center;
         padding: 15px;
         font-size: 0.9rem;
-        color: #555;
+        color: #a0aebe;
     }
     .version-switch {
         display: inline-block;
         margin-top: 8px;
-        color: #888;
+        color: #bec8d4;
         text-decoration: underline;
         cursor: pointer;
         transition: 0.3s;
@@ -949,3 +949,8 @@ button:focus-visible,
 .modal-close{background:#192532;border:1px solid rgba(255,255,255,.2);border-radius:50%;width:35px;height:35px;display:grid;place-items:center;line-height:1;font-family:Arial,Helvetica,sans-serif;font-weight:700}
 .modal-close:hover{background:#5f1939;color:#fff}
 @media(max-width:640px){.rules-list{grid-template-columns:1fr}.modal-content{padding:22px 14px;max-height:90dvh}.rules-heading{margin:0 34px 17px}.rules-item{padding:13px 12px 12px 49px}.rules-body{font-size:.94rem}}
+
+/* Keep the background page still while community rules are open. */
+body.rules-open {
+    overflow: hidden;
+}
