@@ -253,16 +253,33 @@ let currentVersion = 'desktop';
         toggle.setAttribute('aria-expanded', String(willOpen));
     }
 
+    let rulesPreviousFocus = null;
+
     function openRules() {
+        const modal = document.getElementById('rulesModal');
+        if (modal.style.display === 'flex') return;
+
         closeDropdowns();
         closeLanguageMenu();
-        document.getElementById('rulesModal').style.display = 'flex';
+        rulesPreviousFocus = document.activeElement;
+        modal.style.display = 'flex';
+        document.body.classList.add('rules-open');
         document.getElementById('closeRulesButton').focus();
     }
 
     function closeRules() {
-        document.getElementById('rulesModal').style.display = 'none';
-        document.getElementById('rulesMenu').focus();
+        const modal = document.getElementById('rulesModal');
+        if (modal.style.display !== 'flex') return;
+
+        modal.style.display = 'none';
+        document.body.classList.remove('rules-open');
+        const previousFocus = rulesPreviousFocus;
+        rulesPreviousFocus = null;
+        if (previousFocus && previousFocus.isConnected && typeof previousFocus.focus === 'function') {
+            previousFocus.focus();
+        } else {
+            document.getElementById('rulesMenu').focus();
+        }
     }
 
     function activateWithKeyboard(element, action) {
