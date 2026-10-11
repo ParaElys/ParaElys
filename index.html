@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
 <link rel="preload" as="image" href="background.png?v=final-3" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=final-3">
+<link rel="stylesheet" href="styles.css?v=rules-1">
 </head>
 <body>
 <div class="cosmic-stage" id="cosmicStage" aria-hidden="true">
@@ -111,29 +111,14 @@
 
 <!-- Футер -->
 <footer>
-    <div class="rules-menu" id="rulesMenu" role="button" tabindex="0">Правила сообщества</div>
+    <button class="rules-menu" id="rulesMenu" type="button" aria-haspopup="dialog" aria-controls="rulesModal"><img src="icons/rules.svg" width="22" height="22" alt="" aria-hidden="true"><span id="rulesMenuLabel">Правила сообщества</span></button>
     <div id="copyrightText">© 2025 ParaElys | Все права защищены</div>
     <div class="version-switch" id="versionSwitch" role="button" tabindex="0">Мобильная версия</div>
 </footer>
 
-<!-- Модальное окно -->
-<div class="modal" id="rulesModal">
-    <div class="modal-content">
-        <span class="modal-close" id="closeRulesButton" role="button" tabindex="0" aria-label="Закрыть">&times;</span>
-        <h2 id="rulesTitle">📜 Правила сообщества</h2>
-        <p id="rulesText">
-        Добро пожаловать! Ниже приведены правила поведения на всех продуктах ParaElys.<br><br>
-        1. Уважайте других пользователей.<br>
-        2. Запрещено оскорбление, спам и реклама без согласия.<br>
-        3. Контент, нарушающий законы, запрещен.<br>
-        4. Все донаты, покупки и транзакции проходят через официальные каналы.<br>
-        5. Администрация оставляет за собой право удалять сообщения или блокировать пользователей за нарушение правил.<br><br>
-        Дисклеймер: Мы не несем ответственность за действия пользователей вне наших платформ и за сторонний контент.
-        </p>
-    </div>
-</div>
-
-<script src="script.js?v=final-3" defer></script>
+<!-- Оформленные правила сообщества -->
+<div class="modal" id="rulesModal" role="dialog" aria-modal="true" aria-labelledby="rulesTitle" aria-describedby="rulesIntro"><div class="modal-content"><button class="modal-close" id="closeRulesButton" type="button" aria-label="Закрыть">&times;</button><div class="rules-heading"><img src="icons/rules.svg" width="44" height="44" alt="" aria-hidden="true"><h2 id="rulesTitle">Правила сообщества</h2></div><div class="rules-body" id="rulesText"><p class="rules-intro" id="rulesIntro">Добро пожаловать! В сообществе <strong>ParaElys</strong> важны уважение и <em>безопасность</em>.</p><ol class="rules-list"><li class="rules-item"><strong class="rules-item-title">Уважайте других</strong><p><strong>Оскорбления, травля и угрозы</strong> недопустимы.</p></li><li class="rules-item"><strong class="rules-item-title">Без спама и рекламы</strong><p><strong>Спам</strong> и реклама без разрешения запрещены.</p></li><li class="rules-item"><strong class="rules-item-title">Соблюдайте закон</strong><p>Не публикуйте незаконные материалы и вредоносные ссылки.</p></li><li class="rules-item"><strong class="rules-item-title">Официальная поддержка</strong><p>Донаты и обмены проводите через <u>официальные ссылки ParaElys</u>.</p></li><li class="rules-item"><strong class="rules-item-title">Соблюдайте порядок</strong><p>Администрация вправе <strong>удалять сообщения и ограничивать доступ</strong> за нарушения.</p></li><li class="rules-item"><strong class="rules-item-title">Берегите личные данные</strong><p><strong>Не передавайте</strong> пароли и коды подтверждения.</p></li></ol><aside class="rules-warning"><strong>Внимание</strong><p>Если кто-то от имени ParaElys просит деньги или пароль, <strong>проверьте ссылку и отправителя</strong>.</p></aside><section class="rules-disclaimer"><strong class="rules-disclaimer-title">Дисклеймер</strong><p>Мы не отвечаем за действия пользователей <em>вне наших платформ</em> и за сторонний контент.</p></section></div></div></div>
+<script src="script.js?v=rules-1" defer></script>
 
 </body>
 </html>
