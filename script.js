@@ -189,7 +189,17 @@ let currentVersion = 'desktop';
         document.documentElement.lang = lang === 'ua' ? 'uk' : (lang === 'kz' ? 'kk' : lang);
         document.body.classList.toggle('english-ui-font', lang === 'en');
         document.body.classList.toggle('kazakh-ui-font', lang === 'kz');
-        document.getElementById('supportTitle').textContent = t.support;
+        // Название ParaElys выделено отдельно, независимо от порядка слов в переводе.
+        const supportTitle = document.getElementById('supportTitle');
+        const [beforeName, afterName] = t.support.split('ParaElys');
+        const projectName = document.createElement('span');
+        projectName.className = 'support-project-name';
+        projectName.textContent = 'ParaElys';
+        supportTitle.replaceChildren(
+            document.createTextNode(beforeName),
+            projectName,
+            document.createTextNode(afterName || '')
+        );
         document.getElementById('collaborationTitle').textContent = t.collaboration;
         document.getElementById('emailContactLink').textContent = t.emailAction;
         document.getElementById('copyEmailButton').textContent = t.copyEmail;
@@ -365,7 +375,7 @@ let currentVersion = 'desktop';
         function rebuild() {
             liteMode = useLiteMode();
             dpr = Math.min(window.devicePixelRatio || 1, liteMode ? 1 : 1.5);
-            width = window.innerWidth;
+            width = document.getElementById('cosmicStage')?.clientWidth || window.innerWidth;
             height = liteMode
                 ? (document.getElementById('cosmicStage')?.clientHeight || window.innerHeight)
                 : window.innerHeight;
