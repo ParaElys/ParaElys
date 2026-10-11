@@ -22,7 +22,7 @@ Live site: https://paraelys.github.io/ParaElys/
 - `styles.css` — visual design, responsive layout and animation
 - `script.js` — interactions, translations and particle animation
 - `background.png` — main ParaElys background artwork
-- `favicon-pe.png` — site favicon
+- `favicon-crest.png` — site favicon
 - `icons/` — local service and language icons
 
 © ParaElys
