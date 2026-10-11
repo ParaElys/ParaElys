@@ -371,7 +371,9 @@ let currentVersion = 'desktop';
             liteMode = useLiteMode();
             dpr = Math.min(window.devicePixelRatio || 1, liteMode ? 1 : 1.5);
             width = window.innerWidth;
-            height = window.innerHeight;
+            height = liteMode
+                ? (document.getElementById('cosmicStage')?.clientHeight || window.innerHeight)
+                : window.innerHeight;
             canvas.width = Math.max(1, Math.round(width * dpr));
             canvas.height = Math.max(1, Math.round(height * dpr));
             canvas.style.width = width + 'px';
@@ -388,9 +390,11 @@ let currentVersion = 'desktop';
         }
 
         function draw(now) {
+            if (document.hidden) {
+                rafId = 0;
+                return;
+            }
             rafId = requestAnimationFrame(draw);
-
-            if (document.hidden) return;
 
             // На телефонах рисуем примерно 30 кадров/с, на ПК — до 60.
             const minFrame = liteMode ? 32 : 15;
@@ -466,9 +470,25 @@ let currentVersion = 'desktop';
         rebuild();
         rafId = requestAnimationFrame(draw);
 
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                cancelAnimationFrame(rafId);
+                rafId = 0;
+            } else if (!rafId) {
+                lastTime = 0;
+                rafId = requestAnimationFrame(draw);
+            }
+        });
         window.addEventListener('pagehide', () => {
             cancelAnimationFrame(rafId);
-        }, { once: true });
+            rafId = 0;
+        });
+        window.addEventListener('pageshow', () => {
+            if (!document.hidden && !rafId) {
+                lastTime = 0;
+                rafId = requestAnimationFrame(draw);
+            }
+        });
     }
 
     // При первом открытии используем сохранённые настройки, а если их нет —
