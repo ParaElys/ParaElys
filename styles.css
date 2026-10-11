@@ -995,3 +995,48 @@ body.mobile-mode .modal-content {
         0 0 7px rgba(35, 235, 255, .85),
         0 0 17px rgba(35, 195, 255, .5);
 }
+
+
+/* Полная версия на телефоне: учитываем автоматическое уменьшение масштаба сайта. */
+body.phone-full-mode .cosmic-stage {
+    width: max(100vw, 820px);
+    min-width: 820px;
+    height: var(--phone-full-bg-height, 225lvh);
+}
+body.phone-full-mode .cosmic-scene,
+body.phone-full-mode .cosmic-orbit,
+body.phone-full-mode .cosmic-pe {
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Кнопка закрытия правил: крестик без круга и подложки. */
+.modal-content .modal-close {
+    position: static;
+    width: 42px;
+    height: 38px;
+    flex: 0 0 auto;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #ff72b5;
+    font-size: 30px;
+    line-height: 1;
+    text-shadow: 0 1px 2px #000, 0 0 6px rgba(255, 76, 148, .35);
+    cursor: pointer;
+}
+.modal-content .modal-close:hover {
+    background: transparent;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 82, 159, .8);
+}
+.rules-modal-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 0 0 48px;
+    padding: 4px 10px;
+    border-bottom: 1px solid rgba(0, 255, 224, .12);
+}
