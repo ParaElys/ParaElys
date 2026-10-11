@@ -16,15 +16,9 @@ let currentVersion = 'desktop';
             rulesMenu: 'Правила сообщества',
             mobileVersion: 'Мобильная версия',
             fullVersion: 'Полная версия',
-            rulesTitle: '📜 Правила сообщества',
+            rulesTitle: 'Правила сообщества',
             homeLabel: 'На главную',
-            rulesHtml: `Добро пожаловать! Ниже приведены правила поведения на всех продуктах ParaElys.<br><br>
-            1. Уважайте других пользователей.<br>
-            2. Запрещено оскорбление, спам и реклама без согласия.<br>
-            3. Контент, нарушающий законы, запрещен.<br>
-            4. Все донаты, покупки и транзакции проходят через официальные каналы.<br>
-            5. Администрация оставляет за собой право удалять сообщения или блокировать пользователей за нарушение правил.<br><br>
-            Дисклеймер: Мы не несем ответственность за действия пользователей вне наших платформ и за сторонний контент.`
+            rulesHtml: `<p class="rules-intro" id="rulesIntro">Добро пожаловать! В сообществе <strong>ParaElys</strong> важны уважение и <em>безопасность</em>.</p><ol class="rules-list"><li class="rules-item"><strong class="rules-item-title">Уважайте других</strong><p><strong>Оскорбления, травля и угрозы</strong> недопустимы.</p></li><li class="rules-item"><strong class="rules-item-title">Без спама и рекламы</strong><p><strong>Спам</strong> и реклама без разрешения запрещены.</p></li><li class="rules-item"><strong class="rules-item-title">Соблюдайте закон</strong><p>Не публикуйте незаконные материалы и вредоносные ссылки.</p></li><li class="rules-item"><strong class="rules-item-title">Официальная поддержка</strong><p>Донаты и обмены проводите через <u>официальные ссылки ParaElys</u>.</p></li><li class="rules-item"><strong class="rules-item-title">Соблюдайте порядок</strong><p>Администрация вправе <strong>удалять сообщения и ограничивать доступ</strong> за нарушения.</p></li><li class="rules-item"><strong class="rules-item-title">Берегите личные данные</strong><p><strong>Не передавайте</strong> пароли и коды подтверждения.</p></li></ol><aside class="rules-warning"><strong>Внимание</strong><p>Если кто-то от имени ParaElys просит деньги или пароль, <strong>проверьте ссылку и отправителя</strong>.</p></aside><section class="rules-disclaimer"><strong class="rules-disclaimer-title">Дисклеймер</strong><p>Мы не отвечаем за действия пользователей <em>вне наших платформ</em> и за сторонний контент.</p></section>`
         },
         en: {
             flagSrc: 'icons/flags/gb.svg',
@@ -40,15 +34,9 @@ let currentVersion = 'desktop';
             rulesMenu: 'Community Rules',
             mobileVersion: 'Mobile version',
             fullVersion: 'Full version',
-            rulesTitle: '📜 Community Rules',
+            rulesTitle: 'Community Rules',
             homeLabel: 'Back to home',
-            rulesHtml: `Welcome! Below are the rules of conduct for all ParaElys products.<br><br>
-            1. Respect other users.<br>
-            2. Insults, spam, and advertising without permission are prohibited.<br>
-            3. Content that violates the law is prohibited.<br>
-            4. All donations, purchases, and transactions must go through official channels.<br>
-            5. The administration reserves the right to remove messages or block users for violating the rules.<br><br>
-            Disclaimer: We are not responsible for users' actions outside our platforms or for third-party content.`
+            rulesHtml: `<p class="rules-intro" id="rulesIntro">Welcome! <strong>ParaElys</strong> values respect and <em>safety</em>.</p><ol class="rules-list"><li class="rules-item"><strong class="rules-item-title">Respect others</strong><p><strong>Insults, harassment, and threats</strong> are not allowed.</p></li><li class="rules-item"><strong class="rules-item-title">No spam or unsolicited ads</strong><p><strong>Spam</strong> and advertising without permission are prohibited.</p></li><li class="rules-item"><strong class="rules-item-title">Follow the law</strong><p>Do not share unlawful content or malicious links.</p></li><li class="rules-item"><strong class="rules-item-title">Use official support links</strong><p>Donate and trade only through <u>official ParaElys links</u>.</p></li><li class="rules-item"><strong class="rules-item-title">Respect moderation</strong><p>Admins may <strong>remove messages or restrict access</strong> for violations.</p></li><li class="rules-item"><strong class="rules-item-title">Protect your information</strong><p><strong>Never share</strong> passwords or verification codes.</p></li></ol><aside class="rules-warning"><strong>Important</strong><p>If someone claiming to represent ParaElys asks for money or passwords, <strong>verify the link and sender</strong>.</p></aside><section class="rules-disclaimer"><strong class="rules-disclaimer-title">Disclaimer</strong><p>We are not responsible for users' actions <em>outside our platforms</em> or third-party content.</p></section>`
         },
         ua: {
             flagSrc: 'icons/flags/ua.svg',
@@ -64,15 +52,9 @@ let currentVersion = 'desktop';
             rulesMenu: 'Правила спільноти',
             mobileVersion: 'Мобільна версія',
             fullVersion: 'Повна версія',
-            rulesTitle: '📜 Правила спільноти',
+            rulesTitle: 'Правила спільноти',
             homeLabel: 'На головну',
-            rulesHtml: `Ласкаво просимо! Нижче наведено правила поведінки на всіх продуктах ParaElys.<br><br>
-            1. Поважайте інших користувачів.<br>
-            2. Заборонені образи, спам і реклама без дозволу.<br>
-            3. Контент, що порушує закон, заборонений.<br>
-            4. Усі донати, покупки та транзакції мають проходити через офіційні канали.<br>
-            5. Адміністрація залишає за собою право видаляти повідомлення або блокувати користувачів за порушення правил.<br><br>
-            Дисклеймер: Ми не несемо відповідальності за дії користувачів поза нашими платформами та за сторонній контент.`
+            rulesHtml: `<p class="rules-intro" id="rulesIntro">Ласкаво просимо! У <strong>ParaElys</strong> ми цінуємо повагу та <em>безпеку</em>.</p><ol class="rules-list"><li class="rules-item"><strong class="rules-item-title">Поважайте інших</strong><p><strong>Образи, цькування та погрози</strong> неприпустимі.</p></li><li class="rules-item"><strong class="rules-item-title">Без спаму та реклами</strong><p><strong>Спам</strong> і реклама без дозволу заборонені.</p></li><li class="rules-item"><strong class="rules-item-title">Дотримуйтеся закону</strong><p>Не поширюйте незаконні матеріали та шкідливі посилання.</p></li><li class="rules-item"><strong class="rules-item-title">Офіційна підтримка</strong><p>Для донатів та обмінів використовуйте <u>офіційні посилання ParaElys</u>.</p></li><li class="rules-item"><strong class="rules-item-title">Дотримуйтеся порядку</strong><p>За порушення адміністрація може <strong>видаляти повідомлення й обмежувати доступ</strong>.</p></li><li class="rules-item"><strong class="rules-item-title">Бережіть особисті дані</strong><p><strong>Не передавайте</strong> паролі та коди підтвердження.</p></li></ol><aside class="rules-warning"><strong>Увага</strong><p>Якщо хтось від імені ParaElys просить гроші чи пароль, <strong>перевірте посилання та відправника</strong>.</p></aside><section class="rules-disclaimer"><strong class="rules-disclaimer-title">Застереження</strong><p>Ми не відповідаємо за дії користувачів <em>поза нашими платформами</em> та сторонній контент.</p></section>`
         },
         kz: {
             flagSrc: 'icons/flags/kz.svg',
@@ -88,15 +70,9 @@ let currentVersion = 'desktop';
             rulesMenu: 'Қауымдастық ережелері',
             mobileVersion: 'Мобильді нұсқа',
             fullVersion: 'Толық нұсқа',
-            rulesTitle: '📜 Қауымдастық ережелері',
+            rulesTitle: 'Қауымдастық ережелері',
             homeLabel: 'Басты бетке',
-            rulesHtml: `Қош келдіңіз! Төменде ParaElys жобаларына арналған мінез-құлық ережелері берілген.<br><br>
-            1. Басқа пайдаланушыларды құрметтеңіз.<br>
-            2. Қорлау, спам және рұқсатсыз жарнамаға тыйым салынады.<br>
-            3. Заңды бұзатын контентке тыйым салынады.<br>
-            4. Барлық донаттар, сатып алулар және транзакциялар ресми арналар арқылы өтуі керек.<br>
-            5. Әкімшілік ережелерді бұзғаны үшін хабарламаларды өшіруге немесе пайдаланушыларды бұғаттауға құқылы.<br><br>
-            Ескерту: Біз платформаларымыздан тыс пайдаланушылардың әрекеттеріне және үшінші тарап контентіне жауапты емеспіз.`
+            rulesHtml: `<p class="rules-intro" id="rulesIntro">Қош келдіңіз! <strong>ParaElys</strong> сыйластық пен <em>қауіпсіздікті</em> бағалайды.</p><ol class="rules-list"><li class="rules-item"><strong class="rules-item-title">Басқаларды құрметтеңіз</strong><p><strong>Қорлауға, қудалауға және қорқытуға</strong> жол берілмейді.</p></li><li class="rules-item"><strong class="rules-item-title">Спам мен жарнамаға тыйым салынады</strong><p><strong>Спам</strong> және рұқсатсыз жарнама жарияламаңыз.</p></li><li class="rules-item"><strong class="rules-item-title">Заңды сақтаңыз</strong><p>Заңсыз материалдар мен зиянды сілтемелерді таратпаңыз.</p></li><li class="rules-item"><strong class="rules-item-title">Ресми қолдау</strong><p>Донаттар мен айырбастау үшін <u>ParaElys ресми сілтемелерін</u> пайдаланыңыз.</p></li><li class="rules-item"><strong class="rules-item-title">Тәртіпті сақтаңыз</strong><p>Ереже бұзылса, әкімшілік <strong>хабарламаларды өшіріп, қолжетімділікті шектей алады</strong>.</p></li><li class="rules-item"><strong class="rules-item-title">Жеке деректерді қорғаңыз</strong><p><strong>Құпиясөз бен растау кодтарын</strong> ешкімге бермеңіз.</p></li></ol><aside class="rules-warning"><strong>Назар аударыңыз</strong><p>Біреу ParaElys атынан ақша немесе құпиясөз сұраса, <strong>сілтеме мен жіберушіні тексеріңіз</strong>.</p></aside><section class="rules-disclaimer"><strong class="rules-disclaimer-title">Ескертпе</strong><p>Біз пайдаланушылардың <em>платформаларымыздан тыс әрекеттеріне</em> және үшінші тарап контентіне жауап бермейміз.</p></section>`
         }
     };
 
@@ -220,7 +196,7 @@ let currentVersion = 'desktop';
         document.querySelectorAll('[data-soon]').forEach(label => {
             label.textContent = t.soon;
         });
-        document.querySelector('.rules-menu').textContent = t.rulesMenu;
+        document.getElementById('rulesMenuLabel').textContent = t.rulesMenu;
         document.getElementById('copyrightText').textContent = copyrightFor(lang);
         document.getElementById('rulesTitle').textContent = t.rulesTitle;
         document.getElementById('rulesText').innerHTML = t.rulesHtml;
@@ -281,10 +257,12 @@ let currentVersion = 'desktop';
         closeDropdowns();
         closeLanguageMenu();
         document.getElementById('rulesModal').style.display = 'flex';
+        document.getElementById('closeRulesButton').focus();
     }
 
     function closeRules() {
         document.getElementById('rulesModal').style.display = 'none';
+        document.getElementById('rulesMenu').focus();
     }
 
     function activateWithKeyboard(element, action) {
@@ -525,9 +503,7 @@ let currentVersion = 'desktop';
         closeRulesButton.addEventListener('click', closeRules);
         emailContactLink.addEventListener('click', openEmailContact);
 
-        activateWithKeyboard(rulesMenu, openRules);
         activateWithKeyboard(versionSwitch, toggleVersion);
-        activateWithKeyboard(closeRulesButton, closeRules);
 
         document.querySelectorAll('.support-disabled, .social-disabled').forEach(link => {
             link.addEventListener('click', event => event.preventDefault());
@@ -547,6 +523,7 @@ let currentVersion = 'desktop';
         });
 
         document.addEventListener('keydown', event => {
+            if (event.key === 'Tab' && rulesModal.style.display === 'flex') { event.preventDefault(); closeRulesButton.focus(); }
             if (event.key === 'Escape') {
                 closeDropdowns();
                 closeLanguageMenu();
