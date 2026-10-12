@@ -1,0 +1,17 @@
+{
+  "name": "ParaElys — официальный сайт",
+  "short_name": "ParaElys",
+  "start_url": "/ParaElys/",
+  "scope": "/ParaElys/",
+  "display": "browser",
+  "background_color": "#080c1b",
+  "theme_color": "#080c1b",
+  "icons": [
+    {
+      "src": "/ParaElys/favicon-crest.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
